@@ -12,6 +12,11 @@
     <%= @item.description %>
   </li>
 
+  <li>
+    <strong>Price:</strong>
+    <%= @item.price %>
+  </li>
+
 </ul>
 
 <span><%= link "Edit", to: item_path(@conn, :edit, @item) %></span>

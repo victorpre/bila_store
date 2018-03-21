@@ -6,6 +6,7 @@ defmodule BilaStore.Product.Item do
   schema "items" do
     field :description, :string
     field :name, :string
+    field :price, :integer
 
     timestamps()
   end
@@ -13,7 +14,7 @@ defmodule BilaStore.Product.Item do
   @doc false
   def changeset(item, attrs) do
     item
-    |> cast(attrs, [:name, :description])
-    |> validate_required([:name, :description])
+    |> cast(attrs, [:name, :description, :price])
+    |> validate_required([:name, :description, :price])
   end
 end

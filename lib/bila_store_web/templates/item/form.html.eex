@@ -18,6 +18,12 @@
   </div>
 
   <div class="form-group">
+    <%= label f, :price, class: "control-label" %>
+    <%= number_input f, :price, class: "form-control" %>
+    <%= error_tag f, :price %>
+  </div>
+
+  <div class="form-group">
     <%= submit "Submit", class: "btn btn-primary" %>
   </div>
 <% end %>

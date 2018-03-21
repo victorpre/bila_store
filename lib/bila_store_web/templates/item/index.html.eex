@@ -5,6 +5,7 @@
     <tr>
       <th>Name</th>
       <th>Description</th>
+      <th>Price</th>
 
       <th></th>
     </tr>
@@ -14,6 +15,7 @@
     <tr>
       <td><%= item.name %></td>
       <td><%= item.description %></td>
+      <td><%= item.price %></td>
 
       <td class="text-right">
         <span><%= link "Show", to: item_path(@conn, :show, item), class: "btn btn-default btn-xs" %></span>
@@ -25,6 +27,4 @@
   </tbody>
 </table>
 
-<%= if @current_user do %>
 <span><%= link "New Item", to: item_path(@conn, :new) %></span>
-<% end %>
