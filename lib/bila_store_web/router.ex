@@ -15,6 +15,7 @@ defmodule BilaStoreWeb.Router do
 
   pipeline :auth do
     plug BilaStore.Auth.Pipeline
+    plug BilaStore.Auth.CurrentUser
   end
 
   pipeline :ensure_auth do
@@ -27,15 +28,12 @@ defmodule BilaStoreWeb.Router do
     get "/", PageController, :index
     get "/login", SessionController, :create
     post "/login", SessionController, :login
-
+    get "/products", ProductController, :index
   end
 
   scope "/", BilaStoreWeb do
     pipe_through [:browser, :auth, :ensure_auth]
     post "/logout", SessionController, :logout
+    resources "/items", ItemController
   end
-  # Other scopes may use custom stacks.
-  # scope "/api", BilaStoreWeb do
-  #   pipe_through :api
-  # end
 end
