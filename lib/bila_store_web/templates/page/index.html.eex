@@ -1,5 +1,5 @@
 <div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "BilaStore" %></h2>
+  <h2><%= gettext "Welcome to %{name}!", name: "BilaMarkt" %></h2>
   <p class="lead">A place you can buy cool stuff, help a friend a out,<br />for a cheap and fair price.</p>
   <p><%=link "Gimme the muambas", to: product_path(@conn, :index), class: "btn btn-primary btn-lg" %></p>
 </div>
