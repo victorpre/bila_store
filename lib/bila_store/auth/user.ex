@@ -13,6 +13,7 @@ defmodule BilaStore.Auth.User do
   def changeset(user, attrs) do
     user
     |> cast(attrs, [:username, :password])
+    |> unique_constraint(:username, message: "that username is already taken")
     |> validate_required([:username, :password])
     |> put_pass_hash()
   end
