@@ -1,36 +1,11 @@
 <div class="jumbotron">
-  <h2><%= gettext "Welcome to %{name}!", name: "Phoenix" %></h2>
-  <p class="lead">A productive web framework that<br />does not compromise speed and maintainability.</p>
+  <h2><%= gettext "Welcome to %{name}!", name: "BilaMarkt" %></h2>
+  <p class="lead">A place you can buy cool stuff, help a friend a out,<br />for a cheap and fair price.</p>
+  <p><%=link "Gimme the muambas", to: product_path(@conn, :index), class: "btn btn-primary btn-lg" %></p>
 </div>
 
-<div class="row marketing">
-  <div class="col-lg-6">
-    <h4>Resources</h4>
-    <ul>
-      <li>
-        <a href="http://phoenixframework.org/docs/overview">Guides</a>
-      </li>
-      <li>
-        <a href="https://hexdocs.pm/phoenix">Docs</a>
-      </li>
-      <li>
-        <a href="https://github.com/phoenixframework/phoenix">Source</a>
-      </li>
-    </ul>
-  </div>
-
-  <div class="col-lg-6">
-    <h4>Help</h4>
-    <ul>
-      <li>
-        <a href="http://groups.google.com/group/phoenix-talk">Mailing list</a>
-      </li>
-      <li>
-        <a href="http://webchat.freenode.net/?channels=elixir-lang">#elixir-lang on freenode IRC</a>
-      </li>
-      <li>
-        <a href="https://twitter.com/elixirphoenix">@elixirphoenix</a>
-      </li>
-    </ul>
+<div class="row">
+  <div class="col-lg-12">
+    <%= img_tag "http://i0.kym-cdn.com/photos/images/original/000/264/241/9e9.gif", class: "img-responsive center-block" %>
   </div>
 </div>

@@ -4,6 +4,7 @@
   <thead>
     <tr>
       <th>Url</th>
+      <th>Item</th>
 
       <th></th>
     </tr>
@@ -12,6 +13,7 @@
 <%= for image <- @images do %>
     <tr>
       <td><%= image.url %></td>
+      <td><%= image.item_id %></td>
 
       <td class="text-right">
         <span><%= link "Show", to: image_path(@conn, :show, image), class: "btn btn-default btn-xs" %></span>
