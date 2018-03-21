@@ -33,10 +33,15 @@
       <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
       <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
 
-      <main role="main">
+      <main role="main" class="main-container" >
         <%= render @view_module, @view_template, assigns %>
       </main>
 
+      <footer class="footer">
+          <p class="footer-text">If you liked anything, contact me through <a href="mailto:victor.presumido@gmail.com">victor.presumido@gmail.com</a> or
+            <a href="https://telegram.me/victorpre">@victorpre</a>.
+          </p>
+      </footer>
     </div> <!-- /container -->
     <script src="<%= static_path(@conn, "/js/app.js") %>"></script>
   </body>

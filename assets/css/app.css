@@ -1,1 +1,21 @@
 /* This file is for your main application css. */
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  height: 50px;
+  -webkit-box-shadow: 3px 3px 5px 3px #ccc;
+  -moz-box-shadow:    3px 3px 5px 3px #ccc;
+  box-shadow:         3px 3px 5px 3px #ccc;
+}
+
+.footer-text {
+  margin-top: 15px;
+}
+
+.main-container {
+  margin-bottom: 100px;
+}
