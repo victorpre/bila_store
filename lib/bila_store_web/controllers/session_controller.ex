@@ -9,10 +9,8 @@ defmodule BilaStoreWeb.SessionController do
     maybe_user = Guardian.Plug.current_resource(conn)
 
     message =
-      if maybe_user != nil do
-        "Someone is logged in"
-      else
-        "No one is logged in"
+      if maybe_user == nil do
+        "Please, sign in if you are an admin."
       end
 
     conn
