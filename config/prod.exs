@@ -15,8 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :bila_store, BilaStoreWeb.Endpoint,
   load_from_system_env: true,
-  url: [scheme: "https", host: "https://young-sea-81541.herokuapp.com/", port: 443],
-  force_ssl: [rewrite_on: [:x_forwarded_proto]],
+  url: [scheme: "http", host: "young-sea-81541.herokuapp.com/", port: 443],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
 
@@ -27,7 +26,6 @@ config :bila_store, BilaStore.Repo,
   adapter: Ecto.Adapters.Postgres,
   url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE" || "10")),
-  ssl: true
 
 # ## SSL Support
 #
