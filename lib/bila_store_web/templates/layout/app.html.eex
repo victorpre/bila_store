@@ -17,8 +17,9 @@
         <nav role="navigation">
           <ul class="nav nav-pills pull-right">
             <li><%= link "Home", to: "/" %></li>
+              <li><%= link "Products", to: product_path(@conn, :index)%></li>
             <%= if @current_user do %>
-              <li><%= link "Products", to: item_path(@conn, :index)%></li>
+              <li><%= link "Items", to: item_path(@conn, :index)%></li>
               <li><%= link "Images", to: image_path(@conn, :index)%></li>
               <li><%= link "Logout", to: session_path(@conn, :logout), method: :post%></li>
             <% else %>
