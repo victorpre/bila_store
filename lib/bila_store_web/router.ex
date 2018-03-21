@@ -35,5 +35,6 @@ defmodule BilaStoreWeb.Router do
     pipe_through [:browser, :auth, :ensure_auth]
     post "/logout", SessionController, :logout
     resources "/items", ItemController
+    resources "/images", ImageController
   end
 end
