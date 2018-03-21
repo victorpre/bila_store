@@ -8,6 +8,14 @@ defmodule BilaStore.Product do
 
   alias BilaStore.Product.Item
 
+  def list_all_products do
+    Repo.all(from(i in Item, select: i, preload: :images))
+  end
+
+  def get_product_with_image(id) do
+    Repo.preload(Repo.get(Item, id), :images)
+  end
+
   @doc """
   Returns the list of items.
 

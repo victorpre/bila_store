@@ -13,7 +13,7 @@ defmodule BilaStore.Product.Image do
   @doc false
   def changeset(image, attrs) do
     image
-    |> cast(attrs, [:url])
-    |> validate_required([:url])
+    |> cast(attrs, [:url,:item_id])
+    |> validate_required([:url, :item_id])
   end
 end
