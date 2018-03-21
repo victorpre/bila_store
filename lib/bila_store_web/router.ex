@@ -29,6 +29,7 @@ defmodule BilaStoreWeb.Router do
     get "/login", SessionController, :create
     post "/login", SessionController, :login
     get "/products", ProductController, :index
+    get "/products/:id", ProductController, :show
   end
 
   scope "/", BilaStoreWeb do

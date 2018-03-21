@@ -2,11 +2,13 @@ defmodule BilaStore.Product.Item do
   use Ecto.Schema
   import Ecto.Changeset
 
+  alias BilaStore.Product.Image
 
   schema "items" do
     field :description, :string
     field :name, :string
     field :price, :integer
+    has_many :images, Image
 
     timestamps()
   end

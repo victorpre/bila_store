@@ -37,7 +37,9 @@ defmodule BilaStoreWeb.ImageController do
   def edit(conn, %{"id" => id}) do
     image = Product.get_image!(id)
     changeset = Product.change_image(image)
-    render(conn, "edit.html", image: image, changeset: changeset)
+    conn
+    |> assign(:items, Repo.all(Item))
+    |>render("edit.html", image: image, changeset: changeset)
   end
 
   def update(conn, %{"id" => id, "image" => image_params}) do
