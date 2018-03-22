@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -39,7 +39,8 @@
 
       <footer class="footer">
           <p class="footer-text">If you liked anything, contact me through <a href="mailto:victor.presumido@gmail.com">victor.presumido@gmail.com</a> or
-            <a href="https://telegram.me/victorpre">@victorpre</a>.
+            <a href="https://telegram.me/victorpre">@victorpre</a>.</br> Enjoyed the project? Star it on
+                        <a href="https://github.com/victorpre/bila_store">GitHub</a>.
           </p>
       </footer>
     </div> <!-- /container -->
