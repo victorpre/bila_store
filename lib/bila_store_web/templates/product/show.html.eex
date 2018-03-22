@@ -5,7 +5,7 @@
       <div class="caption">
         <h2><%= @product.name %></h2>
         <h4>R$ <%= @product.price %></h4>
-        <p><%= @product.description %></p>
+        <p><%= raw(@product.description) %></p>
       </div>
     </div>
   </div>
