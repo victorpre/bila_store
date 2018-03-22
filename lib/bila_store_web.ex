@@ -39,6 +39,7 @@ defmodule BilaStoreWeb do
 
       import BilaStoreWeb.Router.Helpers
       import BilaStoreWeb.ErrorHelpers
+      import BilaStoreWeb.ImageHelpers
       import BilaStoreWeb.Gettext
     end
   end
