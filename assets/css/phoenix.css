@@ -22,12 +22,13 @@ body, form, ul, table {
   border-bottom: 1px solid #e5e5e5;
 }
 .logo {
-  width: 519px;
+  width: 320px;
   height: 71px;
   display: inline-block;
   margin-bottom: 1em;
-  background-image: url("/images/bila_store.png");
-  background-size: 519px 71px;
+  background-image: url("/images/bila_store_small.png");
+  background-size: 320px 71px;
+
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
@@ -41,6 +42,12 @@ body, form, ul, table {
 @media (min-width: 768px) {
   .container {
     max-width: 730px;
+  }
+
+  .logo {
+    width: 519px;
+    background-image: url("/images/bila_store.png");
+    background-size: 519px 71px;
   }
 }
 .container-narrow > hr {
