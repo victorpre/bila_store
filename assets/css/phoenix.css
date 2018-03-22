@@ -58,6 +58,10 @@ body, form, ul, table {
   margin: 35px 0;
 }
 
+.thumbnail {
+  word-wrap: break-word;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   /* Remove the padding we set earlier */
