@@ -8,6 +8,7 @@ defmodule BilaStore.Product.Item do
     field :description, :string
     field :name, :string
     field :price, :integer
+    field :available, :boolean
     has_many :images, Image
 
     timestamps()
@@ -16,7 +17,7 @@ defmodule BilaStore.Product.Item do
   @doc false
   def changeset(item, attrs) do
     item
-    |> cast(attrs, [:name, :description, :price])
-    |> validate_required([:name, :description, :price])
+    |> cast(attrs, [:name, :description, :price, :available])
+    |> validate_required([:name, :description, :price, :available])
   end
 end

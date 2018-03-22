@@ -7,6 +7,9 @@
         <div class="thumbnail">
           <%= card_thumbnail(product)  %>
           <div class="caption">
+            <%= if !product.available do %>
+              <span class="label label-danger">SOLD</span>
+            <% end %>
             <h2><%= product.name %></h2>
             <h4>R$ <%= product.price %></h4>
             <p><%= raw(product.description)  %></p>
