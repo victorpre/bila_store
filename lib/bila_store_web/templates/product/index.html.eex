@@ -12,7 +12,7 @@
             <p><%= raw(product.description)  %></p>
             <hr>
             <p>
-              <%= link "Details", to: product_path(@conn, :show, product), class: "btn btn-primary" %>
+              <%= link "Details", to: product_path(@conn, :show, product), class: "btn btn-primary btn-lg btn-block" %>
             </p>
           </div>
         </div>
