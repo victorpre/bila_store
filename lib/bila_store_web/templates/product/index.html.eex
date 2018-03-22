@@ -1,20 +1,22 @@
 <h2>Listing Products</h2>
 
-<div class="row">
-  <%= for product <- @products do %>
-    <div class="col-sm-12 col-md-6">
-      <div class="thumbnail">
-        <%= card_thumbnail(product)  %>
-        <div class="caption">
-          <h2><%= product.name %></h2>
-          <h4>R$ <%= product.price %></h4>
-          <p><%= raw(product.description)  %></p>
-          <hr>
-          <p>
-            <%= link "Details", to: product_path(@conn, :show, product), class: "btn btn-primary" %>
-          </p>
+<%= for product_row <- (@products |> Enum.chunk_every(2))do %>
+  <div class="row">
+    <%= for product <- product_row do %>
+      <div class="col-sm-12 col-md-6">
+        <div class="thumbnail">
+          <%= card_thumbnail(product)  %>
+          <div class="caption">
+            <h2><%= product.name %></h2>
+            <h4>R$ <%= product.price %></h4>
+            <p><%= raw(product.description)  %></p>
+            <hr>
+            <p>
+              <%= link "Details", to: product_path(@conn, :show, product), class: "btn btn-primary" %>
+            </p>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
+<% end %>
