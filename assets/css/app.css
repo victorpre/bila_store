@@ -13,7 +13,13 @@
 }
 
 .footer-text {
-  margin-top: 15px;
+  margin-top: 7px;
+}
+
+@media (min-width: 768px) {
+  .footer-text {
+    margin-top: 15px;
+  }
 }
 
 .main-container {
