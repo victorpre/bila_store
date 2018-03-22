@@ -15,7 +15,7 @@ use Mix.Config
 # which you typically run after static files are built.
 config :bila_store, BilaStoreWeb.Endpoint,
   load_from_system_env: true,
-  url: [scheme: "https", host: "young-sea-81541.herokuapp.com", port: 443],
+  url: [scheme: "http", host: "www.store.victorpre.com", port: 443],
   force_ssl: [rewrite_on: [:x_forwarded_proto]],
   cache_static_manifest: "priv/static/cache_manifest.json",
   secret_key_base: System.get_env("SECRET_KEY_BASE")
